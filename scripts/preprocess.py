@@ -36,10 +36,10 @@ def process_images(input_dir, output_dir, target_size=(1024, 1024)):
                     
                     img_resized.save(output_path, 'JPEG', quality=95)
                     
-                    print(f"✅ Procesada exitosamente: {filename} ➔ {os.path.basename(output_path)}")
+                    print(f" Procesada exitosamente: {filename} ➔ {os.path.basename(output_path)}")
                     
             except Exception as e:
-                print(f"❌ Error procesando {filename}: {e}")
+                print(f" Error procesando {filename}: {e}")
 
 if __name__ == "__main__":
     # Rutas relativas seguras (OPSEC)
