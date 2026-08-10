@@ -1,7 +1,7 @@
 import os
 
 # Ruta exacta donde Kohya lee los archivos de entrenamiento
-directorio_textos = '/home/daniel/Escritorio/ia-imag/kohya_dataset/img/40_ohwx'
+directorio_textos = '/home/ia-imag/kohya_dataset/img/40_ohwx'
 
 def purgar_captions():
     contador = 0
