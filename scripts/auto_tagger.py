@@ -6,7 +6,7 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 def auto_caption_images(processed_dir, trigger_word="ohwx man"):
     # Detectar automáticamente si usar la gráfica (CUDA) o el procesador (CPU)
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"⚙️  Inicializando modelo BLIP en: {device.upper()}")
+    print(f"Inicializando modelo BLIP en: {device.upper()}")
 
     try:
         # Descargar y cargar el procesador y el modelo (se guardan en caché)
@@ -50,9 +50,9 @@ def auto_caption_images(processed_dir, trigger_word="ohwx man"):
                 count += 1
                 
             except Exception as e:
-                print(f"⚠️ Error procesando {filename}: {e}")
+                print(f" Error procesando {filename}: {e}")
 
-    print(f"🎉 Proceso completado. Se han etiquetado {count} imágenes.")
+    print(f"Proceso completado. Se han etiquetado {count} imágenes.")
 
 if __name__ == "__main__":
     BASE_DIR = os.path.expanduser("~/Escritorio/ia-imag")
