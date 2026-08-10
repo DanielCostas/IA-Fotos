@@ -2,7 +2,7 @@ import os
 
 def clean_and_rename(raw_dir, processed_dir):
     if not os.path.exists(raw_dir) or not os.path.exists(processed_dir):
-        print("❌ Una de las carpetas no existe. Revisa las rutas.")
+        print("Una de las carpetas no existe. Revisa las rutas.")
         return
 
     valid_extensions = ('.png', '.jpg', '.jpeg', '.webp')
@@ -12,7 +12,7 @@ def clean_and_rename(raw_dir, processed_dir):
     processed_files = sorted([f for f in os.listdir(processed_dir) if f.lower().endswith(valid_extensions)])
     
     if len(raw_files) != len(processed_files):
-        print(f"⚠️ Advertencia: Hay {len(raw_files)} fotos en raw y {len(processed_files)} en processed. Asegúrate de que coinciden.")
+        print(f" Advertencia: Hay {len(raw_files)} fotos en raw y {len(processed_files)} en processed. Asegúrate de que coinciden.")
     
     print("Iniciando el renombrado masivo...")
     
@@ -41,10 +41,10 @@ def clean_and_rename(raw_dir, processed_dir):
         
         print(f"🔄 {raw_filename} ➔ {new_raw_name}")
 
-    print("✅ ¡Renombrado completado con éxito!")
+    print(" ¡Renombrado completado con éxito!")
 
 if __name__ == "__main__":
-    BASE_DIR = os.path.expanduser("~/Escritorio/ia-imag")
+    BASE_DIR = os.path.expanduser("~/ia-imag")
     RAW_FOLDER = os.path.join(BASE_DIR, "raw_dataset")
     PROCESSED_FOLDER = os.path.join(BASE_DIR, "processed_dataset")
     
