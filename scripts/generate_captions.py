@@ -17,10 +17,10 @@ def generate_captions(processed_dir, trigger_word="ohwx man"):
             
             count += 1
 
-    print(f"✅ Se han generado {count} archivos .txt con la etiqueta base.")
+    print(f" Se han generado {count} archivos .txt con la etiqueta base.")
 
 if __name__ == "__main__":
-    BASE_DIR = os.path.expanduser("~/Escritorio/ia-imag")
+    BASE_DIR = os.path.expanduser("~/ia-imag")
     PROCESSED_FOLDER = os.path.join(BASE_DIR, "processed_dataset")
     
     generate_captions(PROCESSED_FOLDER)
