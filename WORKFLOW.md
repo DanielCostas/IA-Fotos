@@ -18,9 +18,9 @@ El grafo de ejecución se divide en bloques funcionales interconectados que gest
 
 *   **Bloque de Carga y Modelos:**
     *   `Load Checkpoint`: Carga el modelo base (`RealVisXL V5.0`) extrayendo las salidas de `MODEL`, `CLIP` y `VAE`.
-    *   `Load LoRA`: Se interpone en las señales de `MODEL` y `CLIP` aplicando el ajuste fino de identidad (`daniel_lora_v2`) con una `fuerza_modelo` de `0.85` y una `fuerza_clip` de `1.00`.
+    *   `Load LoRA`: Se interpone en las señales de `MODEL` y `CLIP` aplicando el ajuste fino de identidad con una `fuerza_modelo` de `0.85` y una `fuerza_clip` de `1.00`.
 *   **Bloque de Condicionamiento Semántico:**
-    *   `CLIP Text Encode (Positive)`: Aloja el *prompt* principal de escena, plano medio (*medium shot*), restricciones de vestuario (`long-sleeve t-shirt`) y directrices de textura orgánica.
+    *   `CLIP Text Encode (Positive)`: Aloja el *prompt* principal de escena, tipo de plano, restricciones de vestuario y directrices de textura orgánica.
     *   `CLIP Text Encode (Negative)`: Filtra artefactos digitales, iluminación de estudio y estilos ilustrativos.
 *   **Bloque de Generación Base (KSampler):**
     *   Recibe el latente vacío (`1024x1024`), el modelo con LoRA integrado y los condicionamientos de texto.
@@ -42,7 +42,7 @@ Durante el despliegue del entorno sobre Ubuntu Linux con Python 3.12 y GPU RTX 3
 
 ## 4. Guía de Hiperparámetros Críticos
 
-Para replicar con exactitud el equilibrio entre la precisión de la identidad biométrica y el realismo de los detalles, se deben mantener los siguientes valores en los nodos clave:
+Para replicar con exactitud el equilibrio entre la precisión de la identidad biométrica y el realismo de los detalles, se han empleado los siguientes valores en los nodos clave:
 
 | Componente / Nodo | Parámetro | Valor Configurado | Justificación Técnica |
 | :--- | :--- | :--- | :--- |
