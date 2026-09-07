@@ -55,7 +55,6 @@ Para erradicar la falta de micro-texturas en la mirada y el clásico efecto de i
   * **Escala CFG:** 5.5
   * **Muestreador:** `euler_ancestral`
   * **Programador:** `normal`
-  * **Control de Escena:** Se fuerza el uso de un plano medio (*medium shot*) y prendas de manga larga (`long-sleeve t-shirt`) directamente en los prompts globales para aislar la anatomía y evitar interferencias espaciales con tatuajes en los antebrazos.
 * **Detección Biométrica (ONNX/Ultralytics Provider):** Integración del modelo `face_yolov8m.onnx` para la localización milimétrica de las coordenadas del rostro sobre la decodificación VAE de la imagen base.
 * **Micro-Restauración (FaceDetailer Pipeline):**
   * **Área de Recorte (Guide Size):** 512 píxeles centrados en la máscara facial.
